@@ -1,5 +1,5 @@
 package goit.module6.musicShop;
 
-public class Guitar {
+public class Guitar extends MusicInstrument{
 
 }

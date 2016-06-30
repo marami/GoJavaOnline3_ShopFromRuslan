@@ -6,11 +6,8 @@ import java.util.*;
 
 public class Order {
 
-    private Map<String,Integer> yourOrder = new HashMap<>();
+    private final Map<String,Integer> yourOrder = new HashMap<>();
 
-    Guitar guitar = new Guitar();
-    Piano piano = new Piano();
-    Trumpet trumpet = new Trumpet();
 
     public void createOrder (){
 
@@ -30,8 +27,11 @@ public class Order {
         System.out.println("Guitars - " + yourOrder.get("guitar"));
         System.out.println("Pianos - " + yourOrder.get("piano"));
         System.out.println("Trumpets - " + yourOrder.get("trumpet"));
+    }
 
+    public Map<String,Integer> getYourOrder(){
 
+        return yourOrder;
     }
 }
 

@@ -9,8 +9,6 @@ public class Runner {
 
         MusicShop musicShop = new MusicShop();
 
-        musicShop.rangeShop();
-
         Order order = new Order();
         order.createOrder();
         order.printOrder();
