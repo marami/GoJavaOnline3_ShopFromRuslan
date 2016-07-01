@@ -1,37 +1,95 @@
 package goit.module6.musicShop;
 
-import javax.sound.midi.Instrument;
-import java.util.Scanner;
+import java.security.Key;
 import java.util.*;
+
+import static goit.module6.musicShop.MusicInstrument.instrument;
 
 public class Order {
 
-    private final Map<String,Integer> yourOrder = new HashMap<>();
+    public static void createOrder() {
 
+        Scanner scanner = new Scanner(System.in);
 
-    public void createOrder (){
+        System.out.println("Enter please your order on Guitar: ");
 
-        System.out.println("Please enter numer of guitars in your order - ");
-        yourOrder.put("guitar",CorrectScanner.getCorrectInt());
+        int numberGuitar = 0;
+        boolean positiveIntGuitar = false;
 
-        System.out.println("Please enter numer of pianos in your order - ");
-        yourOrder.put("piano",CorrectScanner.getCorrectInt());
+        while (!positiveIntGuitar) {
 
-        System.out.println("Please enter numer of trumpets in your order - ");
-        yourOrder.put("trumpet",CorrectScanner.getCorrectInt());
+            numberGuitar = scanner.nextInt();
+            if (numberGuitar < 0) {
+                System.out.println("Your order is not correct.Please try again");
+            } else {
+                positiveIntGuitar = true;
+            }
+        }
+
+        System.out.println("Enter please your order on Piano: ");
+
+        int numberPiano = 0;
+        boolean positiveIntPiano = false;
+
+        while (!positiveIntPiano) {
+
+            numberPiano = scanner.nextInt();
+            if (numberPiano < 0) {
+                System.out.println("Your order is not correct.Please try again");
+            } else {
+                positiveIntPiano = true;
+            }
+        }
+
+        System.out.println("Enter please your order on Trumpet: ");
+
+        int numberTrumpet = 0;
+        boolean positiveIntTrumpet = false;
+
+        while (!positiveIntTrumpet) {
+
+            numberTrumpet = scanner.nextInt();
+            if (numberTrumpet < 0) {
+                System.out.println("Your order is not correct.Please try again");
+            } else {
+                positiveIntTrumpet = true;
+            }
+        }
+
+        Map<String, Integer> order = new HashMap<String, Integer>();
+        order.put(Piano.getNamePiano(),new Integer(numberPiano));
+        order.put(Guitar.getNameGuitar(),new Integer(numberGuitar));
+        order.put(Trumpet.getNameTrumpet(),new Integer(numberTrumpet));
+
+        for (Map.Entry<String,Integer> ord : order.entrySet()) {
+
+            System.out.printf("Name your instrument order - %s - number of: %d \n", ord.getKey(), ord.getValue());
+            
+        }
+
     }
 
-    public void printOrder(){
+    public List<MusicInstrument> prepareInstruments (Map<String,Integer> order) {
 
-        System.out.println("Your order : ");
-        System.out.println("Guitars - " + yourOrder.get("guitar"));
-        System.out.println("Pianos - " + yourOrder.get("piano"));
-        System.out.println("Trumpets - " + yourOrder.get("trumpet"));
+        List <MusicInstrument> balance = new ArrayList<>();
+
+
+        
+        for (int i =0; i < instrument.size();i++){
+            for (int j=0; j < order.size();j++){
+                if(instrument.equals(order)) {
+                    instrument.remove(order);
+                    System.out.println(instrument);
+                }
+                instrument.clear();
+                instrument.putAll(instrument: Map<? extends String,? extends Integer>);
+
+            }
+
+        }
+
     }
 
-    public Map<String,Integer> getYourOrder(){
-
-        return yourOrder;
-    }
 }
+
 

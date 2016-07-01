@@ -1,26 +1,20 @@
 package goit.module6.musicShop;
 
-import java.util.*;
-
-import static goit.module6.musicShop.MusicInstrument.*;
+import java.util.List;
+import java.util.Map;
 
 public class MusicShop {
 
-    public static void assortShop() {
+    public static void welcomeToShop(){
 
-        HashMap<String, Integer> rangeInstrument = new HashMap<String, Integer>();
-        rangeInstrument.put(PIANO, 20);
-        rangeInstrument.put(TRUMPET, 20);
-        rangeInstrument.put(GUITAR, 20);
-        rangeInstrument.size();
+        System.out.println("Hello,welcome to our music shop 'GoIt'");
+        System.out.println("Discover our range : ");
+
     }
 
-    public static void loadOrder() {
 
-        for
-    }
-}
 
+   }
 
 
 
