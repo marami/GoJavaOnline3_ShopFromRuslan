@@ -1,8 +1,5 @@
 package goit.module6.musicShop;
 
-import java.util.List;
-import java.util.Map;
-
 public class MusicShop {
 
     public static void welcomeToShop(){

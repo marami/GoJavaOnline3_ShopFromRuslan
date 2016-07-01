@@ -68,7 +68,7 @@ public class Order {
         }
 
     }
-
+//    НЕ ЗНАЮ ЧТО С ЭТИМ МЕТОДОМ СДЕЛАТЬ????
     public List<MusicInstrument> prepareInstruments (Map<String,Integer> order) {
 
         List <MusicInstrument> balance = new ArrayList<>();

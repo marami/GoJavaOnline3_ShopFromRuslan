@@ -2,8 +2,6 @@ package goit.module6.musicShop;
 
 import java.util.*;
 
-
-
 public class MusicInstrument {
 
      static Map<String,Integer> instrument = new HashMap<>();

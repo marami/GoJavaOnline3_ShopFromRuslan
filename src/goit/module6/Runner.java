@@ -3,11 +3,7 @@ package goit.module6;
 
 import goit.module6.musicShop.*;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
-import static goit.module6.musicShop.MusicInstrument.instrument;
 
 public class Runner {
 
