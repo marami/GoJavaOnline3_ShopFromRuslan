@@ -4,20 +4,16 @@ import java.util.*;
 
 public class MusicInstrument {
 
-     static Map<String,Integer> instrument = new HashMap<>();
+    public static Map<String, Integer> instrument = new HashMap<>();
 
     public static void createListInstrument() {
 
-        Map<String,Integer> instrument = new HashMap<>();
-        instrument.put(Piano.getNamePiano(),new Integer(100));
-        instrument.put(Guitar.getNameGuitar(), new Integer(100));
-        instrument.put(Trumpet.getNameTrumpet(),new Integer(100));
-        instrument.size();
-
-        for (Map.Entry<String,Integer> instr : instrument.entrySet() ) {
-
-                System.out.printf("Name instrument - %s - in stock : %d \n", instr.getKey(), instr.getValue());
-            
-        }
+        Map<String, Integer> instrument = new HashMap<>();
+        instrument.put(Piano.getNamePiano(), 90);
+        System.out.println("Assortiment Piano in our shop: " + instrument.get(Piano.getNamePiano()));
+        instrument.put(Guitar.getNameGuitar(), 100);
+        System.out.println("Assortiment Guitar in our shop: " + instrument.get(Guitar.getNameGuitar()));
+        instrument.put(Trumpet.getNameTrumpet(), 130);
+        System.out.println("Assortiment Trumpet in our shop: " + instrument.get(Trumpet.getNameTrumpet()));
     }
 }

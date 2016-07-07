@@ -7,5 +7,4 @@ public  class Guitar extends MusicInstrument{
     public static String getNameGuitar() {
         return nameGuitar;
     }
-
 }

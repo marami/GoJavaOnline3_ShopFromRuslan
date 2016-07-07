@@ -6,11 +6,7 @@ public class MusicShop {
 
         System.out.println("Hello,welcome to our music shop 'GoIt'");
         System.out.println("Discover our range : ");
-
     }
-
-
-
    }
 
 
