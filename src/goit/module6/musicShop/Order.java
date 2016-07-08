@@ -13,23 +13,7 @@ public class Order {
 
         try {
 
-        System.out.println("Enter please your order on Guitar: ");
 
-            int numberGuitar = 0;
-            boolean positiveIntGuitar = false;
-
-            while (!positiveIntGuitar) {
-                numberGuitar = scanner.nextInt();
-
-                if (numberGuitar < 0) {
-                    System.out.println("Your order is not correct.Please try again");
-                }
-                      if (numberGuitar > 100){
-                    System.out.println("Your number > our assortiment.Please try again");
-                        } else {
-                    positiveIntGuitar = true;
-                }
-            }
 
             System.out.println("Enter please your order on Piano: ");
 
@@ -42,11 +26,28 @@ public class Order {
                 if (numberPiano < 0) {
                     System.out.println("Your order is not correct.Please try again");
                 }
-                     if (numberPiano > 90) {
+                    else if (numberPiano > 90) {
                          System.out.println("Your number > our assortiment.Please try again");
                      } else {
                              positiveIntPiano = true;
                              }
+            }
+
+            System.out.println("Enter please your order on Guitar: ");
+
+            int numberGuitar = 0;
+            boolean positiveIntGuitar = false;
+
+            while (!positiveIntGuitar) {
+                numberGuitar = scanner.nextInt();
+
+                if (numberGuitar < 0) {
+                    System.out.println("Your order is not correct.Please try again");
+                   } else if (numberGuitar > 100){
+                       System.out.println("Your number > our assortiment.Please try again");
+                     } else {
+                        positiveIntGuitar = true;
+                            }
             }
 
             System.out.println("Enter please your order on Trumpet: ");
@@ -60,7 +61,7 @@ public class Order {
                 if (numberTrumpet < 0) {
                     System.out.println("Your order is not correct.Please try again");
                 }
-                     if (numberTrumpet > 130){
+                    else if (numberTrumpet > 130){
                         System.out.println("Your number > our assortiment.Please try again");
                          } else {
                              positiveIntTrumpet = true;
