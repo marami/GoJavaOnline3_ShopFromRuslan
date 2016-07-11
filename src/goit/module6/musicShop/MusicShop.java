@@ -1,22 +1,36 @@
 package goit.module6.musicShop;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class MusicShop {
-    public final Map<String, Integer> instruments = new HashMap<>();
+    private final Map<String, Integer> goods = new HashMap<>();
 
-    public void MusicShop() {
+    public MusicShop() {
         System.out.println("Hello,welcome to our music shop 'GoIt'");
         System.out.println("Discover our range : ");
 
-        instruments.put(Piano.getClass().getSimpleName(), 90);
-        instruments.put("", 100);
-        instruments.put(Trumpet.getName(), 130);
+        goods.put(new Piano().getName(), 90);
+        goods.put(new Guitar ().getName(), 100);
+        goods.put(new Trumpet().getName(), 130);
 
-        MusicInstrument.print();
+        print();
     }
 
+
+    public void print() {
+        Iterator it = goods.entrySet().iterator();
+
+        while(it.hasNext()) {
+            Map.Entry<String, Integer> pair = (Map.Entry)it.next();
+            System.out.println("Assortiment " + pair.getKey() + " in our shop: " + pair.getValue());
+        }
+    }
+
+    public Map<String, Integer> getGoods() {
+        return goods;
+    }
 }
 
 
