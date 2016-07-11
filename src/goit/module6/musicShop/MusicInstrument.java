@@ -2,18 +2,24 @@ package goit.module6.musicShop;
 
 import java.util.*;
 
-public class MusicInstrument {
+public abstract class MusicInstrument {
 
-    public static Map<String, Integer> instrument = new HashMap<>();
+    public static final Map<String, Integer> instruments;
+    public static String name = "music instrument";
 
-    public static void createListInstrument() {
-
-        Map<String, Integer> instrument = new HashMap<>();
-        instrument.put(Piano.getNamePiano(), 90);
-        System.out.println("Assortiment Piano in our shop: " + instrument.get(Piano.getNamePiano()));
-        instrument.put(Guitar.getNameGuitar(), 100);
-        System.out.println("Assortiment Guitar in our shop: " + instrument.get(Guitar.getNameGuitar()));
-        instrument.put(Trumpet.getNameTrumpet(), 130);
-        System.out.println("Assortiment Trumpet in our shop: " + instrument.get(Trumpet.getNameTrumpet()));
+    static {
+        instruments = new HashMap<>();
+        instruments.put(Piano.g, 90);
+        instruments.put(Guitar.getName(), 100);
+        instruments.put(Trumpet.getName(), 130);
     }
+
+    public static void print() {
+        System.out.println("Assortiment Piano in our shop: " + instruments.get(Piano.getName()));
+        System.out.println("Assortiment Guitar in our shop: " + instruments.get(Guitar.getName()));
+        System.out.println("Assortiment Trumpet in our shop: " + instruments.get(Trumpet.getName()));
+    }
+
+    public abstract static String getName();
+
 }
