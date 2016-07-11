@@ -5,7 +5,8 @@
 
 package goit.module6;
 
-import goit.module6.musicShop.*;
+import goit.module6.musicShop.MusicShop;
+import goit.module6.musicShop.Order;
 
 public class Runner {
 

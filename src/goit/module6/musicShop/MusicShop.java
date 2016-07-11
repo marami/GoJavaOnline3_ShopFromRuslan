@@ -1,7 +1,6 @@
 package goit.module6.musicShop;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 public class MusicShop {
@@ -19,12 +18,10 @@ public class MusicShop {
     }
 
 
-    public void print() {
-        Iterator it = goods.entrySet().iterator();
-
-        while(it.hasNext()) {
-            Map.Entry<String, Integer> pair = (Map.Entry)it.next();
-            System.out.println("Assortiment " + pair.getKey() + " in our shop: " + pair.getValue());
+    private void print() {
+        for (Object o : goods.entrySet()) {
+            Map.Entry<String, Integer> pair = (Map.Entry) o;
+            System.out.println("Range " + pair.getKey() + " in our shop: " + pair.getValue());
         }
     }
 
